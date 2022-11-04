@@ -64,7 +64,7 @@ class MapAppController extends GetxController {
 
   Future<void> pickPlaces({String? nextPageToken}) async {
     dynamic request = await Http().request(url: '/nearbysearch/json', method: Method.get, params: {
-      'key': 'AIzaSyDaxIfpA2hPt0NFqjYeRYJlCDMV59ZIkOA',
+      'key': 'yourAPIkey',
       'location': '${myPosition.value.latitude} ${myPosition.value.longitude}',
       'radius': '50000',
       'language': 'pt-BR',
@@ -90,7 +90,7 @@ class MapAppController extends GetxController {
 
   Future<void> pickPlace(LatLng placePick) async {
     dynamic request = await Http().request(url: '/nearbysearch/json', method: Method.get, params: {
-      'key': 'AIzaSyDaxIfpA2hPt0NFqjYeRYJlCDMV59ZIkOA',
+      'key': 'yourAPIkey',
       'location': '${placePick.latitude} ${placePick.longitude}',
       'rankby': 'distance',
       'language': 'pt-BR',

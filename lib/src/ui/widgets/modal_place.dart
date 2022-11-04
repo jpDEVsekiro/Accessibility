@@ -20,7 +20,7 @@ class ModalPlace {
 
   Future<Place?> getFinalPlace(String placeId) async {
     dynamic request = await Http().request(url: '/details/json', method: Method.get, params: {
-      'key': 'AIzaSyDaxIfpA2hPt0NFqjYeRYJlCDMV59ZIkOA',
+      'key': 'yourAPIkey',
       'place_id': placeId,
       'language': 'pt-BR',
     });
@@ -118,7 +118,7 @@ class ModalPlace {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20),
                                   child: Image.network(
-                                    'https://maps.googleapis.com/maps/api/place/photo?maxwidth=1600&maxheight=1600&photoreference=${i?.photoreference}&key=AIzaSyDaxIfpA2hPt0NFqjYeRYJlCDMV59ZIkOA',
+                                    'https://maps.googleapis.com/maps/api/place/photo?maxwidth=1600&maxheight=1600&photoreference=${i?.photoreference}&key=yourAPIkey',
                                     fit: BoxFit.cover,
                                     loadingBuilder:
                                         (BuildContext context, Widget child, ImageChunkEvent? loadingProgress) {
